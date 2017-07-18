@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CarMove : MonoBehaviour {
+    public int id;
     public float speed = 2.0f;
     public GameObject[] target;
+    public GameObject sezione;
+    
+
     int i = 0;
     float oldAngle;
     // Update is called once per frame
     void FixedUpdate() {
-        Vector2 direction = target[i].transform.position - transform.position;
-
+        //Vector2 direction = target[i].transform.position - transform.position;
+        Vector2 direction = sezione.transform.Find("Fine").position - transform.position;
         // setta l'angolo di rotazione della macchina per farla sembrare che va in quel verso
-        if(direction.y == 0f && direction.x != 0f)
+        if (direction.y == 0f && direction.x != 0f)
         {
             transform.eulerAngles = new Vector3(0, 0, 180);
         }
@@ -41,8 +45,16 @@ public class CarMove : MonoBehaviour {
             transform.eulerAngles = new Vector3(0, 0, angle);
             oldAngle = angle;
         }
-        
+
         // serve per muovere la macchina verso il target di una certa velocità 
-        transform.position = Vector2.MoveTowards(transform.position, target[i].transform.position, speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, target[i].transform.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, sezione.transform.Find("Fine").position, speed * Time.deltaTime);
     }
+
+
+    //private GameObject getChildObject(GameObject oggetto, string name)
+    //{
+    //    GameObject[] figli = oggetto.GetComponentsInChildren();
+    //    return null;
+    //}
 }

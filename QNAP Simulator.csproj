@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CarMove.cs" />
+    <Compile Include="Assets\Scripts\Sezione.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Editor\GitHub\CREDITS.txt" />
