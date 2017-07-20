@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -40,16 +40,16 @@ MonoBehaviour:
     y: 364
     width: 885
     height: 271
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 17}
   - {fileID: 13}
   - {fileID: 15}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,10 +70,10 @@ MonoBehaviour:
     y: 0
     width: 885
     height: 635
-  m_MinSize: {x: 232, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 202, y: 321}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 24
+  controlID: 12
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,8 +92,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 635
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -120,10 +120,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 538, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 679, y: 321}
+  m_MaxSize: {x: 12004, y: 8021}
   vertical: 0
-  controlID: 23
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,15 +142,15 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 635
-  m_MinSize: {x: 102, y: 121}
+  m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 11}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 16}
   - {fileID: 11}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 685
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -289,7 +289,7 @@ MonoBehaviour:
       foldedTreeEntries: []
   historyTab:
     detailsScroll: {x: 0, y: 0}
-    historyTarget: {fileID: 102900000, guid: b0c73f8a6f17c5e4688c89c1916f6fd3, type: 3}
+    historyTarget: {fileID: 11500000, guid: 09cac472cb1ffae4990b2d99b70ce05d, type: 3}
     scroll: {x: 0, y: 0}
     selectionID: 
     changesetTree:
@@ -299,6 +299,28 @@ MonoBehaviour:
       - All: 0
       foldedTreeEntries: []
     history:
+    - CommitID: 8bb25144b348eb168627f3ee46838dd7dde626c2
+      MergeA: 
+      MergeB: 
+      AuthorName: Braccone
+      AuthorEmail: brahimjaddi94@gmail.com
+      CommitEmail: brahimjaddi94@gmail.com
+      CommitName: Braccone
+      Summary: modifica sezione 1 incrocio 1
+      Description: modifica sezione 1 incrocio 1
+      Changes: []
+    - CommitID: 0dfc3cc9b29379ccbe933bb63891fed2c3ac94e5
+      MergeA: 
+      MergeB: 
+      AuthorName: Braccone
+      AuthorEmail: brahimjaddi94@gmail.com
+      CommitEmail: brahimjaddi94@gmail.com
+      CommitName: Braccone
+      Summary: aggiunta foto strada. Inizio inserimento una sezione. Aggiunta incrocio
+        1
+      Description: aggiunta foto strada. Inizio inserimento una sezione. Aggiunta
+        incrocio 1
+      Changes: []
     - CommitID: bf41f32a600749abb353c45e542342507ab2c514
       MergeA: 
       MergeB: 
@@ -409,9 +431,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1366
+    x: 0
     y: 456
-    width: 532
+    width: 883
     height: 250
 --- !u!114 &14
 MonoBehaviour:
@@ -558,20 +580,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\brahi\\Desktop\\universit\xE0\\QNAP\\unity\\QNAP
     Simulator"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 02250000
-    m_LastClickedID: 9474
-    m_ExpandedIDs: 00000000b224000000ca9a3bffffff7f
+    m_SelectedIDs: 1a250000
+    m_LastClickedID: 9498
+    m_ExpandedIDs: 00000000f024000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -599,7 +621,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b2240000
+    m_ExpandedIDs: 00000000f0240000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -624,8 +646,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 36e3feff
+    m_LastClickedInstanceID: -72906
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: b61c0000dc1c000004050000be2200006222000060220000caa6fffff6210000242200000a220000fe210000de2400006429000022260000c02600000a2500009a250000603c0000a0250000a82500009c25000018250000
     m_RenameOverlay:
@@ -715,9 +737,9 @@ MonoBehaviour:
     height: 614
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 10250000
-    m_LastClickedID: 0
-    m_ExpandedIDs: c8f7ffffdcfbffff000000006c250000
+    m_SelectedIDs: d0fbffff
+    m_LastClickedID: -1072
+    m_ExpandedIDs: 96f1feffb409ffff9691ffffd0fbffffdcfbffff0000000000260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -767,14 +789,14 @@ MonoBehaviour:
     width: 883
     height: 343
   m_SceneLighting: 1
-  lastFramingTime: 1007.1959676743419
+  lastFramingTime: 804.8462269056624
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.3573523, y: 3.1063957, z: 0}
+    m_Target: {x: 18.686928, y: 48.047398, z: 0}
     speed: 2
-    m_Value: {x: -3.3573523, y: 3.1063957, z: 0}
+    m_Value: {x: 18.686928, y: 48.047398, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -801,9 +823,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 24.45272
+    m_Target: 33.53893
     speed: 2
-    m_Value: 24.45272
+    m_Value: 33.53893
   m_Ortho:
     m_Target: 1
     speed: 2

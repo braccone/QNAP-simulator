@@ -15,11 +15,11 @@ public class CarMove : MonoBehaviour {
     private void Start()
     {
         //Debug.Log(sezione.transform.GetChild(i).position.x);
-        Debug.Log(sezione.name);
+        //Debug.Log(sezione.name);
         target = new Transform[sezione.transform.childCount];
         for (int j=0; j < sezione.transform.childCount; j++)
         {
-            Debug.Log(j);
+            //Debug.Log(j);
             target[j] = sezione.transform.GetChild(j);
         }
         //sezione = GameObject.Find("sezione");
@@ -48,7 +48,20 @@ public class CarMove : MonoBehaviour {
                 i++;
             } else
             {
+                if(GameObject.Find("sezione_" + (sezione.GetComponent<Sezione>().id + 1)))
+                {
+                    sezione = GameObject.Find("sezione_" + (sezione.GetComponent<Sezione>().id + 1));
+                    target = new Transform[sezione.transform.childCount];
+                    for (int j = 0; j < sezione.transform.childCount; j++)
+                    {
+                        //Debug.Log(j);
+                        target[j] = sezione.transform.GetChild(j);
+                    }
+                    i = 0;
+                }
+                
                 transform.eulerAngles = new Vector3(0, 0, oldAngle);
+
             }
         }
         else
@@ -67,7 +80,15 @@ public class CarMove : MonoBehaviour {
         //transform.position = Vector2.MoveTowards(transform.position, sezione.transform.Find("Fine").position, speed * Time.deltaTime);
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if(speed > 0f)
+        {
+            speed = 0f;
+        }
+    }
+
     //private GameObject getChildObject(GameObject oggetto, string name)
     //{
     //    GameObject[] figli = oggetto.GetComponentsInChildren();

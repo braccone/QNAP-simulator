@@ -9,7 +9,7 @@ public class ingresso : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //InvokeRepeating("CreateCar", 0.0f, 1f);
+        //InvokeRepeating("CreateCar", 0.0f, 2f);
         CreateCar();
     }
 
