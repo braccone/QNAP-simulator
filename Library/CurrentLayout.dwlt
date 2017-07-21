@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -40,16 +40,16 @@ MonoBehaviour:
     y: 364
     width: 885
     height: 271
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 17}
   - {fileID: 13}
   - {fileID: 15}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,8 +70,8 @@ MonoBehaviour:
     y: 0
     width: 885
     height: 635
-  m_MinSize: {x: 232, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 202, y: 342}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
   controlID: 12
 --- !u!114 &4
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
   controlID: 11
 --- !u!114 &6
@@ -172,7 +172,7 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 685
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -281,7 +281,7 @@ MonoBehaviour:
   changesTab:
     commitBody: 
     commitMessage: 
-    currentBranch: '[unknown]'
+    currentBranch: master
     horizontalScroll: {x: 0, y: 0}
     tree:
       entries: []
@@ -299,6 +299,18 @@ MonoBehaviour:
       - All: 0
       foldedTreeEntries: []
     history:
+    - CommitID: 4b921e9be5682578d545ecae5da02b2b6d94cf0c
+      MergeA: 
+      MergeB: 
+      AuthorName: Braccone
+      AuthorEmail: brahimjaddi94@gmail.com
+      CommitEmail: brahimjaddi94@gmail.com
+      CommitName: Braccone
+      Summary: "finito aggiunta sezioni incrocio 1. C'\xE8 da modificare le sezioni
+        con il progetto vecchio di sabbatini"
+      Description: "finito aggiunta sezioni incrocio 1. C'\xE8 da modificare le sezioni
+        con il progetto vecchio di sabbatini"
+      Changes: []
     - CommitID: 4fa1dc7c4acc8fafe0d47749300dd754f668f371
       MergeA: 
       MergeB: 
@@ -658,8 +670,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: d0750000
+    m_LastClickedInstanceID: 30160
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: b61c0000dc1c000004050000be2200006222000060220000caa6fffff6210000242200000a220000fe210000de2400006429000022260000c02600000a2500009a250000603c0000a0250000a82500009c25000018250000
     m_RenameOverlay:
@@ -749,9 +761,9 @@ MonoBehaviour:
     height: 614
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 58060000
+    m_SelectedIDs: d0750000
     m_LastClickedID: 0
-    m_ExpandedIDs: dcfbffff000000000e26000044260000
+    m_ExpandedIDs: 92b0feff7ab1feffa6b2feffb009ffffdcfbffff000000000e260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -806,9 +818,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 19.427166, y: 41.491074, z: 0}
+    m_Target: {x: 14.841322, y: 36.560482, z: 0}
     speed: 2
-    m_Value: {x: 19.427166, y: 41.491074, z: 0}
+    m_Value: {x: 14.841322, y: 36.560482, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -835,9 +847,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 39.995792
+    m_Target: 45.813004
     speed: 2
-    m_Value: 39.995792
+    m_Value: 45.813004
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -904,18 +916,18 @@ MonoBehaviour:
       y: 17
       width: 883
       height: 326
-    m_Scale: {x: 1.2298737, y: 1.2298737}
-    m_Translation: {x: 441.49997, y: 163}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 441.5, y: 163}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -358.97995
-      y: -132.53394
-      width: 717.9599
-      height: 265.06787
+      x: -441.5
+      y: -163
+      width: 883
+      height: 326
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}

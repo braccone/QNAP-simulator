@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CarMove.cs" />
     <Compile Include="Assets\Scripts\Sezione.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\ingresso.cs" />
     <Compile Include="Assets\Scripts\uscita.cs" />
   </ItemGroup>
