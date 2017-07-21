@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 371}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -40,16 +40,16 @@ MonoBehaviour:
     y: 364
     width: 885
     height: 271
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 13}
   - {fileID: 15}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,8 +70,8 @@ MonoBehaviour:
     y: 0
     width: 885
     height: 635
-  m_MinSize: {x: 202, y: 321}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 232, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
   controlID: 12
 --- !u!114 &4
@@ -92,8 +92,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 635
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 679, y: 321}
-  m_MaxSize: {x: 12004, y: 8021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 11
 --- !u!114 &6
@@ -172,7 +172,7 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 685
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -299,6 +299,18 @@ MonoBehaviour:
       - All: 0
       foldedTreeEntries: []
     history:
+    - CommitID: 4fa1dc7c4acc8fafe0d47749300dd754f668f371
+      MergeA: 
+      MergeB: 
+      AuthorName: Braccone
+      AuthorEmail: brahimjaddi94@gmail.com
+      CommitEmail: brahimjaddi94@gmail.com
+      CommitName: Braccone
+      Summary: "ora la macchina si muove su pi\xF9 sezioni e ci sta la collissione
+        tra pi\xF9 macchine"
+      Description: "ora la macchina si muove su pi\xF9 sezioni e ci sta la collissione
+        tra pi\xF9 macchine"
+      Changes: []
     - CommitID: 8bb25144b348eb168627f3ee46838dd7dde626c2
       MergeA: 
       MergeB: 
@@ -580,19 +592,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefab
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\brahi\\Desktop\\universit\xE0\\QNAP\\unity\\QNAP
     Simulator"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1a250000
-    m_LastClickedID: 9498
+    m_SelectedIDs: d0250000
+    m_LastClickedID: 9680
     m_ExpandedIDs: 00000000f024000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -646,8 +658,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 36e3feff
-    m_LastClickedInstanceID: -72906
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: b61c0000dc1c000004050000be2200006222000060220000caa6fffff6210000242200000a220000fe210000de2400006429000022260000c02600000a2500009a250000603c0000a0250000a82500009c25000018250000
     m_RenameOverlay:
@@ -737,9 +749,9 @@ MonoBehaviour:
     height: 614
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d0fbffff
-    m_LastClickedID: -1072
-    m_ExpandedIDs: 96f1feffb409ffff9691ffffd0fbffffdcfbffff0000000000260000
+    m_SelectedIDs: 58060000
+    m_LastClickedID: 0
+    m_ExpandedIDs: dcfbffff000000000e26000044260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -794,9 +806,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 18.686928, y: 48.047398, z: 0}
+    m_Target: {x: 19.427166, y: 41.491074, z: 0}
     speed: 2
-    m_Value: {x: 18.686928, y: 48.047398, z: 0}
+    m_Value: {x: 19.427166, y: 41.491074, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -823,9 +835,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 33.53893
+    m_Target: 39.995792
     speed: 2
-    m_Value: 33.53893
+    m_Value: 39.995792
   m_Ortho:
     m_Target: 1
     speed: 2

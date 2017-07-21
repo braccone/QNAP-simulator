@@ -5,6 +5,8 @@ using UnityEngine;
 public class ingresso : MonoBehaviour
 {
     public GameObject prefab;
+    public int id;
+    public GameObject sezione;
 
     // Use this for initialization
     void Start()
@@ -21,8 +23,8 @@ public class ingresso : MonoBehaviour
 
     void CreateCar()
     {
-        GameObject temp = (GameObject)Instantiate(prefab);
+        GameObject temp = (GameObject)Instantiate(prefab,this.transform.position,Quaternion.identity);
         //Debug.Log(this.transform.parent.gameObject.name);
-        temp.GetComponent<CarMove>().sezione = this.transform.parent.gameObject;
+        temp.GetComponent<CarMove>().sezione = sezione;
     }
 }
