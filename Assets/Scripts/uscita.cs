@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class uscita : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public int id;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        GameObject.Destroy(collision.gameObject);
+    }
 }

@@ -8,14 +8,17 @@ public class CarMove : MonoBehaviour {
     
     public GameObject sezione;
     private Transform[] target;
+    public int[] path;
 
     int i = 0;
+    int k = 1;
     float oldAngle;
 
     private void Start()
     {
         //Debug.Log(sezione.transform.GetChild(i).position.x);
         //Debug.Log(sezione.name);
+
         target = new Transform[sezione.transform.childCount];
         for (int j=0; j < sezione.transform.childCount; j++)
         {
@@ -42,22 +45,25 @@ public class CarMove : MonoBehaviour {
         }
         if(direction.y == 0f && direction.x == 0f)
         {
-            
             if (i < target.Length-1)
             {
                 i++;
             } else
             {
-                if(GameObject.Find("sezione_" + (sezione.GetComponent<Sezione>().id + 1)))
+                
+                if(GameObject.Find("sezione_" + path[k]))
                 {
-                    sezione = GameObject.Find("sezione_" + (sezione.GetComponent<Sezione>().id + 1));
+                    sezione = GameObject.Find("sezione_" + path[k]);
                     target = new Transform[sezione.transform.childCount];
                     for (int j = 0; j < sezione.transform.childCount; j++)
                     {
                         //Debug.Log(j);
                         target[j] = sezione.transform.GetChild(j);
                     }
-                    i = 0;
+                    //i = 0;
+                    if(k<path.Length-1)
+                        k++;
+                    
                 }
                 
                 transform.eulerAngles = new Vector3(0, 0, oldAngle);
@@ -83,7 +89,7 @@ public class CarMove : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if(speed > 0f)
+        if (speed > 0f)
         {
             speed = 0f;
         }

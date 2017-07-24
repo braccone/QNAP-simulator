@@ -87,6 +87,8 @@
   <ItemGroup>
     <None Include="Assets\Editor\GitHub\CREDITS.txt" />
     <None Include="Assets\Editor\GitHub\EULA.txt" />
+    <None Include="Assets\SIMULAZIONE.txt" />
+    <None Include="Assets\SimulazioneNuovo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
