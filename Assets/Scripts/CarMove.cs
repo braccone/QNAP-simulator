@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CarMove : MonoBehaviour {
-    public int id;
-    public float speed = 2.0f;
+    public string id;
+    public float speed = 5.0f;
     
     public GameObject sezione;
     private Transform[] target;
@@ -45,30 +45,39 @@ public class CarMove : MonoBehaviour {
         }
         if(direction.y == 0f && direction.x == 0f)
         {
+            //Debug.Log(target[i].gameObject.name);
             if (i < target.Length-1)
             {
                 i++;
+               
             } else
             {
-                
-                if(GameObject.Find("sezione_" + path[k]))
-                {
-                    sezione = GameObject.Find("sezione_" + path[k]);
-                    target = new Transform[sezione.transform.childCount];
-                    for (int j = 0; j < sezione.transform.childCount; j++)
-                    {
-                        //Debug.Log(j);
-                        target[j] = sezione.transform.GetChild(j);
-                    }
-                    //i = 0;
-                    if(k<path.Length-1)
-                        k++;
-                    
-                }
-                
-                transform.eulerAngles = new Vector3(0, 0, oldAngle);
+                //if (k < path.Length)
+                //{
+                speed = 0f;
+
+                //CambiaSezione(/*path[k]*/);
+                //if (GameObject.Find("sezione_" + path[k]))
+                //{
+                //    sezione = GameObject.Find("sezione_" + path[k]);
+                //    target = new Transform[sezione.transform.childCount];
+                //    for (int j = 0; j < sezione.transform.childCount; j++)
+                //    {
+                //        //Debug.Log(j);
+                //        target[j] = sezione.transform.GetChild(j);
+                //    }
+                //    //i = 0;
+                //if (k < path.Length - 1)
+                //    k++;
+
+                //}
+                //}
+
+
+
 
             }
+            transform.eulerAngles = new Vector3(0, 0, oldAngle);
         }
         else
         {
@@ -86,13 +95,36 @@ public class CarMove : MonoBehaviour {
         //transform.position = Vector2.MoveTowards(transform.position, sezione.transform.Find("Fine").position, speed * Time.deltaTime);
     }
 
+
+    public void CambiaSezione(/*int id*/)
+    {
+        if (sezione)
+        {
+            //i = 0;
+            //sezione = GameObject.Find("sezione_" + id);
+            //Debug.Log(sezione.name);
+            target = new Transform[sezione.transform.childCount];
+            //Debug.Log(sezione.transform.childCount);
+            for (int j = 0; j < sezione.transform.childCount; j++)
+            {
+                //Debug.Log(j);
+                target[j] = sezione.transform.GetChild(j);
+            }
+            i = 0;
+
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (speed > 0f)
         {
             speed = 0f;
         }
+        //else
+        //{
+        //    speed = 5.0f;
+        //}
     }
 
     //private GameObject getChildObject(GameObject oggetto, string name)

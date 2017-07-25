@@ -20,15 +20,16 @@ public class ingresso : MonoBehaviour
     {
 
     }
-
-    public void CreateCar(int id, int[] path)
+    
+    public void CreateCar(string id /*int[] path*/)
     {
         GameObject temp = (GameObject)Instantiate(prefab,this.transform.position,Quaternion.identity);
         //Debug.Log(this.transform.parent.gameObject.name);
         temp.GetComponent<CarMove>().id = id;
         temp.GetComponent<CarMove>().sezione = sezione;
+        temp.GetComponent<CarMove>().speed = 0f;
         temp.name = "macchina_" + id;
-        temp.GetComponent<CarMove>().path = new int[path.Length];
-        temp.GetComponent<CarMove>().path = path;
+        //temp.GetComponent<CarMove>().path = new int[path.Length];
+        //temp.GetComponent<CarMove>().path = path;
     }
 }
