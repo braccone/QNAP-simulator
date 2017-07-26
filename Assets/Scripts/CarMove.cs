@@ -10,6 +10,11 @@ public class CarMove : MonoBehaviour {
     private Transform[] target;
     public int[] path;
 
+
+    string tempoAttesa = "";
+    GameObject colliso;
+    float t;
+
     int i = 0;
     int k = 1;
     float oldAngle;
@@ -92,6 +97,11 @@ public class CarMove : MonoBehaviour {
 
         // serve per muovere la macchina verso il target di una certa velocità 
         transform.position = Vector2.MoveTowards(transform.position, target[i].position, speed * Time.deltaTime);
+        if(float.TryParse(tempoAttesa, out t))
+            t = t + 0.25f;
+        if (tempoAttesa == t.ToString("f2"))
+            colliso.GetComponent<CarMove>().speed = 3f;
+
         //transform.position = Vector2.MoveTowards(transform.position, sezione.transform.Find("Fine").position, speed * Time.deltaTime);
     }
 
@@ -116,20 +126,12 @@ public class CarMove : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log(collision.gameObject.name);
-        //if (speed > 0f)
-        //{
-        //    speed = 0f;
-        //}
-        //else
-        //{
-        //    speed = 5.0f;
-        //}
-    }
+        if (collision.gameObject.name.Contains("macchina"))
+        {
+            tempoAttesa = GameObject.Find("timer").GetComponent<Timer>().testo.text;
+            colliso = collision.gameObject;
+            collision.gameObject.GetComponent<CarMove>().speed = 0f;
 
-    //private GameObject getChildObject(GameObject oggetto, string name)
-    //{
-    //    GameObject[] figli = oggetto.GetComponentsInChildren();
-    //    return null;
-    //}
+        }
+    }
 }

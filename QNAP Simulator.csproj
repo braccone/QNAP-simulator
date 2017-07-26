@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CarMove.cs" />
+    <Compile Include="Assets\Scripts\Scelta.cs" />
     <Compile Include="Assets\Scripts\Sezione.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\ingresso.cs" />

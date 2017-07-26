@@ -51,7 +51,7 @@ public class Timer : MonoBehaviour {
                         {
                             if (GameObject.Find("macchina_" + vehicles[i][0]))
                             {
-                                GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().speed = 3.7f;
+                                GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().speed = 3f;
                                 GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().sezione = temp.transform.Find("sezione_" + vehicles[i][j + 1].Split('.')[2]).gameObject;
                                 GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().CambiaSezione();
                             }
