@@ -17,78 +17,15 @@ public class Timer : MonoBehaviour {
         
         leggiFileSimulazione();
         startTime = Time.time;
-        string ingresso = "";
-        int k = 0;
 
-        ////
-        temp = GameObject.Find("Incrocio_2");
-        //Debug.Log(/*vehicles[0].Length);*/
-        //temp.transform.Find("ingresso_3").gameObject.GetComponent<ingresso>().CreateCar("M37");
-
-        //(///
-
-        //foreach(string[] row in vehicles)
-        //{
-        //    List<int> percorsoTemp = new List<int>();
-        //    foreach (string element in row)
-        //    {
-        //        //Debug.Log(element);
-
-        //        if (element !=null && !element.Contains("M"))
-        //        {
-        //            string[] val = element.Split('.');
-
-        //            //Debug.Log(val[0]+"."+ val[1]+"."+ val[2]);
-        //            if (val[1] == "2")
-        //            {
-        //                temp = GameObject.Find("Incrocio_2");
-        //                if (val[0] == "2")
-        //                {
-        //                    int a;
-        //                    if (int.TryParse(val[2],out a)){
-        //                        //Debug.Log(a);
-        //                        percorsoTemp.Add(a);
-        //                        //continue;
-        //                    } 
-        //                }
-        //                if (val[0] == "1")
-        //                {
-        //                    ingresso = "ingresso_" + val[2];
-        //                    temp.transform.Find(ingresso).gameObject.GetComponent<ingresso>().CreateCar(k);
-        //                    k++;
-        //                    Debug.Log(ingresso);
-        //                    //break;
-        //                }
-        //            }
-
-        //        }
-        //    }
-        //    //temp = GameObject.Find("Incrocio_2");
-
-        //    ////Debug.Log(temp.name);
-        //    ////Debug.Log(ingresso);
-
-        //    //if (ingresso != "")
-        //    //{
-        //    //    int[] prova = percorsoTemp.ToArray();
-        //    //    //Debug.Log(prova);
-        //    //    temp.transform.Find(ingresso).gameObject.GetComponent<ingresso>().CreateCar(k);
-        //    //    k++;
-        //    //}
-        //    //if (k == 5)
-        //    //{
-        //    //    break;
-        //    //}
-
-        //}
-
+        temp = GameObject.Find("Incrocio_1");
 
     }
 	// Update is called once per frame
 	void FixedUpdate() {
         //Debug.Log(Time.time);
 
-        float t = Time.time - startTime + 47f;
+        float t = Time.time - startTime + 25f;
         string seconds = (t).ToString("f2");
         testo.text = seconds;
         ///prova con tempo
@@ -97,42 +34,30 @@ public class Timer : MonoBehaviour {
         ///
         for(int i =0; i < vehicles.Length; i++)
         {
-            if (vehicles[i][2].Contains(".2."))
+            if (vehicles[i][2].Contains(".1."))
             {
-                //if (vehicles[i][1].Contains(seconds))
-                //{
-                //    //Debug.Log(vehicles[i][0]);
-                //    temp.transform.Find("ingresso_" + vehicles[i][2].Split('.')[2]).gameObject.GetComponent<ingresso>().CreateCar(vehicles[i][0]);
-                //}
-                //if(GameObject.Find("macchina_" + vehicles[i][0]))
-                //{
                 for (int j = 1; j < vehicles[i].Length - 1; j = j + 2)
                 {
                     //Debug.Log(seconds+"--"+ vehicles[i][j]);
                     if (vehicles[i][j].Contains(seconds))
                     {
-                        if(vehicles[i][0] == "MD3")
+                        //Debug.Log(seconds);
+                        if (vehicles[i][j + 1].Contains("1.1."))
                         {
-                            Debug.Log(seconds + "==" + vehicles[i][j].Contains(seconds));
+                            Debug.Log("ingresso_" + vehicles[i][j + 1].Split('.')[2]);
+                            temp.transform.Find("ingresso_" + vehicles[i][j+1].Split('.')[2]).gameObject.GetComponent<ingresso>().CreateCar(vehicles[i][0]);
                         }
-                        if (vehicles[i][j + 1].Contains("1."))
-                        {
-                            temp.transform.Find("ingresso_" + vehicles[i][j+1].Split('.')[j+1]).gameObject.GetComponent<ingresso>().CreateCar(vehicles[i][0]);
-                        }
-                        else
+                        if (vehicles[i][j + 1].Contains("2.1."))
                         {
                             if (GameObject.Find("macchina_" + vehicles[i][0]))
                             {
-                                GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().speed = 5f;
-                                GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().sezione = GameObject.Find("sezione_" + vehicles[i][j + 1].Split('.')[2]);
+                                GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().speed = 3.7f;
+                                GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().sezione = temp.transform.Find("sezione_" + vehicles[i][j + 1].Split('.')[2]).gameObject;
                                 GameObject.Find("macchina_" + vehicles[i][0]).GetComponent<CarMove>().CambiaSezione();
                             }
                         }
-                        }
-                        //Debug.Log(vehicles[i][j + 1]);
-                        
+                    }     
                 }
-                //}
                 
             }
         }

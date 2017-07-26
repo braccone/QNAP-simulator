@@ -117,10 +117,10 @@ public class CarMove : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log(collision.gameObject.name);
-        if (speed > 0f)
-        {
-            speed = 0f;
-        }
+        //if (speed > 0f)
+        //{
+        //    speed = 0f;
+        //}
         //else
         //{
         //    speed = 5.0f;
